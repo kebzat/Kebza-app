@@ -1,0 +1,20 @@
+<div>
+    <label for="answer" class="mb-[10px] block">
+        Answer
+    </label>
+    <textarea id="answer" maxlength="50" placeholder="Enter a answer" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"></textarea>
+    <div class="flex items-center justify-end text-gray-500 font-normal text-xs">
+        <span id="charCount">0</span>
+        <span>/50</span>
+    </div>
+</div>
+
+<script>
+    const textarea = document.getElementById('answer');
+    const charCount = document.getElementById('charCount');
+
+    // Update character count on input
+    textarea.addEventListener('input', () => {
+        charCount.textContent = textarea.value.length;
+    });
+</script>

@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply scroll-smooth;
+}
+body {
+    @apply font-montserrat scroll-smooth;
+}
+
+.h32 {
+    @apply text-[20px] font-bold sm:text-[32px];
+}
+
+.tooltip-arrow {
+    position: absolute;
+    top: 100%; /* Position the arrow below the tooltip */
+    left: 50%; /* Center the arrow */
+    transform: translateX(-50%); /* Center the arrow */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #ef4444; /* Same color as the tooltip */
+}
+
+
+
+
+

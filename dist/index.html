@@ -3,10 +3,501 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind Šablona</title>
+    <title>Kebza app</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-9OO text-gray-900">
-<h1 class="text-6xl font-bold underline">Test tailwind</h1>
+
+<body class="grid grid-cols-12 gap-4">
+<nav class="md:col-span-3 col-span-1 shadow-[4px_0px_32px_0px_rgba(0,0,0,0.05)] h-full w-[50px] md:w-full">
+    <div class="w-full flex items-center justify-center text-[20px] lg:text-[32px] py-4 md:py-8">
+        <span class="text-primary font-bold hidden md:flex">Easy</span>
+        <span class="font-thin hidden md:flex">/software</span>
+        <span class="text-primary font-bold md:hidden">E</span>
+        <span class="font-thin md:hidden">/s</span>
+    </div>
+    <ul class="w-full sticky top-2">
+        <li class="w-full">
+            <a href="#personal-information" class="flex items-center justify-center md:justify-start py-1 md:py-3 px-1 md:px-4 hover:bg-primary-light transition hover:shadow-menu-shadow lg:px-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" class="scale-75 md:scale-100">
+                    <g clip-path="url(#a)">
+                        <path fill="#6B7280" d="M15 7.5c1.375 0 2.5 1.125 2.5 2.5s-1.125 2.5-2.5 2.5a2.507 2.507 0 0 1-2.5-2.5c0-1.375 1.125-2.5 2.5-2.5ZM15 20c3.375 0 7.25 1.613 7.5 2.5h-15c.287-.9 4.137-2.5 7.5-2.5Zm0-15c-2.762 0-5 2.237-5 5 0 2.762 2.238 5 5 5s5-2.238 5-5c0-2.763-2.238-5-5-5Zm0 12.5c-3.338 0-10 1.675-10 5V25h20v-2.5c0-3.325-6.663-5-10-5Z"/>
+                    </g>
+                    <defs>
+                        <clipPath id="a">
+                            <path fill="#fff" d="M0 0h30v30H0z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <span class="ml-4 text-gray-500 text-sm lg:text-lg hidden md:flex">Personal information</span>
+            </a>
+        </li>
+        <li class="w-full">
+            <a href="#contact-details" class="flex items-center py-1 md:py-3 px-1 justify-center md:justify-start md:px-4 hover:bg-primary-light transition hover:shadow-menu-shadow lg:px-8" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" class="scale-75 md:scale-100">
+                    <g clip-path="url(#a)">
+                        <path fill="#6B7280" d="M8.175 6.25c.075 1.112.262 2.2.563 3.238l-1.5 1.5a18.532 18.532 0 0 1-.95-4.738h1.887ZM20.5 21.275c1.063.3 2.15.488 3.25.563V23.7a19.283 19.283 0 0 1-4.75-.938l1.5-1.487ZM9.375 3.75H5c-.688 0-1.25.563-1.25 1.25 0 11.738 9.512 21.25 21.25 21.25.688 0 1.25-.563 1.25-1.25v-4.363c0-.687-.563-1.25-1.25-1.25-1.55 0-3.063-.25-4.462-.712a1.05 1.05 0 0 0-.388-.063 1.28 1.28 0 0 0-.887.363l-2.75 2.75a18.936 18.936 0 0 1-8.238-8.238l2.75-2.75c.35-.35.45-.837.313-1.274A14.2 14.2 0 0 1 10.625 5c0-.688-.563-1.25-1.25-1.25Z"/>
+                    </g>
+                    <defs>
+                        <clipPath id="a">
+                            <path fill="#fff" d="M0 0h30v30H0z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <span class="ml-4 text-gray-500 text-sm lg:text-lg hidden md:flex">Contact details</span>
+            </a>
+        </li>
+        <li class="w-full">
+            <a href="#login" class="flex items-center py-1 md:py-3 px-1 justify-center md:justify-start md:px-4 hover:bg-primary-light transition hover:shadow-menu-shadow lg:px-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" class="scale-75 md:scale-100">
+                    <g clip-path="url(#a)">
+                        <path fill="#6B7280" d="m15 1.25-11.25 5v7.5c0 6.938 4.8 13.425 11.25 15 6.45-1.575 11.25-8.063 11.25-15v-7.5L15 1.25Zm0 13.738h8.75c-.663 5.15-4.1 9.737-8.75 11.175V15H6.25V7.875L15 3.987v11Z"/>
+                    </g>
+                    <defs>
+                        <clipPath id="a">
+                            <path fill="#fff" d="M0 0h30v30H0z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <span class="ml-4 text-gray-500 text-sm lg:text-lg hidden md:flex">Login</span>
+            </a>
+        </li>
+        <li class="w-full">
+            <a href="#security-questions" class="flex items-center py-1 md:py-3 px-1 md:px-4 justify-center md:justify-start hover:bg-primary-light transition hover:shadow-menu-shadow lg:px-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" class="scale-75 md:scale-100">
+                    <g clip-path="url(#a)">
+                        <path fill="#6B7280" d="M13.75 22.5h2.5V20h-2.5v2.5ZM15 2.5C8.1 2.5 2.5 8.1 2.5 15S8.1 27.5 15 27.5 27.5 21.9 27.5 15 21.9 2.5 15 2.5ZM15 25C9.488 25 5 20.512 5 15S9.488 5 15 5s10 4.488 10 10-4.488 10-10 10Zm0-17.5c-2.762 0-5 2.238-5 5h2.5c0-1.375 1.125-2.5 2.5-2.5s2.5 1.125 2.5 2.5c0 2.5-3.75 2.188-3.75 6.25h2.5c0-2.813 3.75-3.125 3.75-6.25 0-2.762-2.238-5-5-5Z"/>
+                    </g>
+                    <defs>
+                        <clipPath id="a">
+                            <path fill="#fff" d="M0 0h30v30H0z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <span class="ml-4 text-gray-500 text-sm lg:text-lg hidden md:flex">Security questions</span>
+            </a>
+        </li>
+        <li class="w-full">
+            <a href="#billing" class="flex items-center py-1 md:py-3 px-1 md:px-4 justify-center md:justify-start hover:bg-primary-light transition hover:shadow-menu-shadow lg:px-8">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" class="scale-75 md:scale-100">
+                    <g clip-path="url(#a)">
+                        <path fill="#6B7280" d="M14.75 13.625c-2.838-.738-3.75-1.5-3.75-2.688 0-1.362 1.262-2.312 3.375-2.312 2.225 0 3.05 1.063 3.125 2.625h2.762c-.087-2.15-1.4-4.125-4.012-4.763V3.75H12.5v2.7c-2.425.525-4.375 2.1-4.375 4.513 0 2.887 2.387 4.325 5.875 5.162 3.125.75 3.75 1.85 3.75 3.012 0 .863-.613 2.238-3.375 2.238-2.575 0-3.588-1.15-3.725-2.625H7.9c.15 2.738 2.2 4.275 4.6 4.788v2.712h3.75v-2.688c2.438-.462 4.375-1.875 4.375-4.437 0-3.55-3.038-4.762-5.875-5.5Z"/>
+                    </g>
+                    <defs>
+                        <clipPath id="a">
+                            <path fill="#fff" d="M0 0h30v30H0z"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <span class="ml-4 text-gray-500 text-sm lg:text-lg hidden md:flex">Billing information</span>
+            </a>
+        </li>
+</nav>
+
+<main class="col-span-11 md:col-span-9 grid-cols-3 grid w-full gap-4 pl-10  pr-10 md:pr-0">
+    <form id="settings" class="col-span-3 md:col-span-2">
+        <section class="w-full py-8 md:mb-8" id="personal-information">
+            <h1 class="h32 mb-6">Personal information</h1>
+            <div class="grid-cols-6 grid gap-4">
+                <div class="lg:col-span-2 md:col-span-3 col-span-6">
+                    <label for="name" class="mb-[10px] block">
+                        Name
+                    </label>
+                    <input id="name" type="text" placeholder="Enter a name" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary input-field"/>
+                </div>
+                <div class="lg:col-span-2 md:col-span-3 col-span-6">
+                    <label for="surname" class="mb-[10px] block">
+                        Surname
+                    </label>
+                    <input id="surname" type="text" placeholder="Enter a surname" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"/>
+                </div>
+                <div class="lg:col-span-2 md:col-span-3 col-span-6">
+                    <label for="dob" class="mb-[10px] block">
+                        Date of birth
+                    </label>
+                    <input id="dob" type="date" placeholder="Enter a surname" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-8" id="contact-details">
+            <h1 class="h32 mb-6">Contact details</h1>
+            <div class="grid-cols-6 grid gap-4 mb-6">
+                <div class="md:col-span-3 col-span-6">
+                    <label for="email" class="mb-[10px] block">
+                        E-mail
+                    </label>
+                    <input id="email" type="email" placeholder="info@info.cz" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary input-field"/>
+                </div>
+                <div class="md:col-span-3 col-span-6">
+                    <label for="phone" class="mb-[10px] block">
+                        Phone number
+                    </label>
+                    <input id="phone" type="tel" placeholder="+420 222 333 444" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"/>
+                </div>
+            </div>
+            <div class="grid-cols-6 grid gap-4">
+                <div class="lg:col-span-2 md:col-span-3 col-span-6">
+                    <label for="street" class="mb-[10px] block">
+                        Street
+                    </label>
+                    <input id="street" type="text" placeholder="Enter a street" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary input-field"/>
+                </div>
+                <div class="lg:col-span-2 md:col-span-3 col-span-6">
+                    <label for="city" class="mb-[10px] block">
+                        City
+                    </label>
+                    <input id="city" type="text" placeholder="Enter a city" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"/>
+                </div>
+                <div class="lg:col-span-2 md:col-span-3 col-span-6">
+                    <label for="zip" class="mb-[10px] block">
+                        ZIP code
+                    </label>
+                    <input id="zip" type="text" placeholder="Enter a ZIP" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-8" id="login">
+            <h1 class="h32 mb-6">Login</h1>
+            <div class="grid-cols-6 grid gap-4">
+                <div class="lg:col-span-2 md:col-span-3 col-span-6">
+                    <label for="username" class="mb-[10px] block">
+                        Username
+                    </label>
+                    <input id="username" type="text" placeholder="Enter a username" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary input-field"/>
+                </div>
+                <div class="lg:col-span-2 md:col-span-3 col-span-6">
+                    <label for="pass" class="mb-[10px] block">
+                        New password
+                    </label>
+                    <input id="pass" type="password" placeholder="*********" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"/>
+                    <div id="tooltip" class="absolute bg-white shadow-sm text-xs text-black p-2 border border-red-500 rounded mt-[-100px] top-0 transform z-10">
+                        Password is too weak!
+                        <div class="tooltip-arrow"></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 md:col-span-3 col-span-6">
+                    <label for="passconf" class="mb-[10px] block">
+                        Confirm password
+                    </label>
+                    <input id="passconf" type="password" placeholder="*********" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-8" id="security-questions">
+            <h1 class="h32 mb-6">Security questions</h1>
+            <div class="grid-cols-6 grid gap-4">
+                <div class="col-span-6">
+                    <div>
+    <label id="listbox-label" class="block text-sm/6 font-medium text-gray-900">Assigned to</label>
+    <div class="relative mt-2">
+        <button type="button" class="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:text-sm/6" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+            <span class="block truncate text-gray-500 overflow-auto whitespace-normal">Select question</span>
+            <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                    <path fill-rule="evenodd" d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z" clip-rule="evenodd"/>
+                </svg>
+            </span>
+        </button>
+        <ul class="absolute z-10 mt-1 max-h-60 w-full overflow-auto hidden rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3">
+            <li class="relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 cursor-pointer transition hover:text-primary hover:bg-primary-light" id="listbox-option-0" role="option">
+                <span class="block truncate font-normal overflow-auto whitespace-normal">If a squirrel stole your sandwich, what would you call it in revenge?</span>
+            </li>
+            <li class="relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 cursor-pointer transition hover:text-primary hover:bg-primary-light" id="listbox-option-0" role="option">
+                <span class="block truncate font-normal overflow-auto whitespace-normal">If you were a secret agent, what would be your embarrassing code name?</span>
+            </li>
+            <li class="relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 cursor-pointer transition hover:text-primary hover:bg-primary-light" id="listbox-option-0" role="option">
+                <span class="block truncate font-normal overflow-auto whitespace-normal">What’s your go-to dance move when nobody’s watching?</span>
+            </li>
+            <li class="relative cursor-default select-none py-2 pl-3 pr-9 text-gray-900 cursor-pointer transition hover:text-primary hover:bg-primary-light" id="listbox-option-0" role="option">
+                <span class="block truncate font-normal overflow-auto whitespace-normal">If your pet had to give a speech about your life, what would they roast you for?</span>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const button = document.querySelector('button[aria-haspopup="listbox"]');
+        const listbox = document.querySelector('[role="listbox"]');
+        const options = listbox.querySelectorAll('[role="option"]');
+        let selectedOption = options[0];
+
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            listbox.classList.toggle('hidden', isExpanded);
+        });
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                selectedOption.classList.remove('font-semibold');
+                selectedOption.classList.add('font-normal');
+
+                selectedOption = option;
+                selectedOption.classList.remove('font-normal');
+                selectedOption.classList.add('font-semibold');
+
+                const selectedText = selectedOption.querySelector('.truncate').textContent;
+                button.querySelector('.truncate').textContent = selectedText;
+
+                button.setAttribute('aria-expanded', false);
+                listbox.classList.add('hidden');
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!button.contains(event.target) && !listbox.contains(event.target)) {
+                button.setAttribute('aria-expanded', false);
+                listbox.classList.add('hidden');
+            }
+        });
+    });
+
+</script>
+                </div>
+                <div class="col-span-6">
+                    <div>
+    <label for="answer" class="mb-[10px] block">
+        Answer
+    </label>
+    <textarea id="answer" maxlength="50" placeholder="Enter a answer" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"></textarea>
+    <div class="flex items-center justify-end text-gray-500 font-normal text-xs">
+        <span id="charCount">0</span>
+        <span>/50</span>
+    </div>
+</div>
+
+<script>
+    const textarea = document.getElementById('answer');
+    const charCount = document.getElementById('charCount');
+
+    // Update character count on input
+    textarea.addEventListener('input', () => {
+        charCount.textContent = textarea.value.length;
+    });
+</script>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-4 md:py-8" id="billing">
+            <h1 class="h32 mb-6">Billing information</h1>
+            <div class="grid-cols-6 grid gap-4 mb-6">
+                <div class="md:col-span-4 col-span-6">
+                    <label for="card" class="mb-[10px] block">
+                        Credit card number
+                    </label>
+                    <input id="card" type="text" placeholder="4444 5543 4444 5555" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary input-field"/>
+                </div>
+                <div class="md:col-span-2 col-span-6">
+                    <label for="date" class="mb-[10px] block">
+                        Exipry date
+                    </label>
+                    <input id="date" type="text" placeholder="11/24" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary  input-field"/>
+                </div>
+            </div>
+            <div class="grid-cols-6 grid gap-4">
+                <div class="md:col-span-2 col-span-6">
+                    <label for="cvv" class="mb-[10px] block">
+                        CVV code
+                    </label>
+                    <input id="cvv" type="text" placeholder="Enter a CVV" class="w-full bg-transparent rounded-md border border-gray-300 py-[10px] px-5 placeholder-gray-300 text-gray-500 outline-none transition focus:border-primary input-field"/>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-2 md:py-8">
+            <div class="grid-cols-6 grid gap-4 mb-6">
+                <div class="md:col-span-3 col-span-6">
+                    <button type="submit" class="bg-button text-white w-full p-3 rounded-md hover:bg-button-hover transition">Save</button>
+                </div>
+            </div>
+        </section>
+    </form>
+    <div class="col-span-3 md:col-span-1 md:py-10 md:mr-6">
+        <div class="sticky top-4">
+            <div class="w-full shadow rounded-md mb-4">
+                <h3 class="font-bold px-5 py-5 border-b text-sm">Preview entered details</h3>
+                <div class="px-5 py-5 text-sm">
+                    <ul>
+                        <li id="previewName" class="hidden"></li>
+                        <li id="previewSurname" class="hidden"></li>
+                        <li id="previewDob" class="hidden"></li>
+                        <li id="previewEmail" class="hidden"></li>
+                        <li id="previewPhone" class="hidden"></li>
+                        <li id="previewStreet" class="hidden"></li>
+                        <li id="previewCity" class="hidden"></li>
+                        <li id="previewZip" class="hidden"></li>
+                        <li id="previewUsername" class="hidden"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full shadow rounded-md @container">
+                <div class="flex items-center flex-wrap justify-between border-b px-5 py-5">
+                    <h3 class="font-bold text-sm">Helpdesk</h3>
+                    <div class="flex items-center justify-end text-[12px]">
+                        <span class="text-primary font-bold">Easy</span>
+                        <span class="font-thin">/software</span>
+                    </div>
+                </div>
+                <div class="px-5 py-5 text-sm flex flex-col gap-4 items-center justify-center @xs:justify-start @xs:flex-row @xs:gap-2">
+                    <img src="imgs/kebza.png" alt="Kebza" class="w-[80px]">
+                    <div class="@xs:text-left text-center">
+                        <span class="font-thin text-lg"><strong class="text-primary font-bold">Tomáš </strong>Kebza</span>
+                        <div class="flex flex-wrap text-xs text-gray-500 justify-center @xs:justify-start">
+                            <a href="tel:603732263" class="transition hover:text-primary mr-4">+420 603 732 263</a>
+                            <a href="mailto:kebza@easysoftware.cz" class="transition hover:text-primary">kebza@easysoftware.cz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+<script>
+
+    // Preview entered details
+    const inputs = document.querySelectorAll('#settings input');
+    const preview = {
+        name: document.getElementById('previewName'),
+        surname: document.getElementById('previewSurname'),
+        dob: document.getElementById('previewDob'),
+        email: document.getElementById('previewEmail'),
+        phone: document.getElementById('previewPhone'),
+        street: document.getElementById('previewStreet'),
+        city: document.getElementById('previewCity'),
+        zip: document.getElementById('previewZip'),
+        username: document.getElementById('previewUsername')
+    };
+
+    inputs.forEach(input => {
+        input.addEventListener('input', updatePreview);
+    });
+
+    function updatePreview() {
+        if (document.getElementById('name').value) {
+            preview.name.innerHTML = `Name: <span class="font-bold">${document.getElementById('name').value}</span>`;
+            preview.name.classList.remove('hidden');
+        } else {
+            preview.name.classList.add('hidden');
+        }
+
+        if (document.getElementById('surname').value) {
+            preview.surname.innerHTML = `Surname: <span class="font-bold">${document.getElementById('surname').value}</span>`;
+            preview.surname.classList.remove('hidden');
+        } else {
+            preview.surname.classList.add('hidden');
+        }
+
+        if (document.getElementById('dob').value) {
+            preview.dob.innerHTML = `Date of Birth: <span class="font-bold">${document.getElementById('dob').value}</span>`;
+            preview.dob.classList.remove('hidden');
+        } else {
+            preview.dob.classList.add('hidden');
+        }
+
+        if (document.getElementById('email').value) {
+            preview.email.innerHTML = `Email: <span class="font-bold">${document.getElementById('email').value}</span>`;
+            preview.email.classList.remove('hidden');
+        } else {
+            preview.email.classList.add('hidden');
+        }
+
+        if (document.getElementById('phone').value) {
+            preview.phone.innerHTML = `Phone: <span class="font-bold">${document.getElementById('phone').value}</span>`;
+            preview.phone.classList.remove('hidden');
+        } else {
+            preview.phone.classList.add('hidden');
+        }
+
+        if (document.getElementById('street').value) {
+            preview.street.innerHTML = `Street: <span class="font-bold">${document.getElementById('street').value}</span>`;
+            preview.street.classList.remove('hidden');
+        } else {
+            preview.street.classList.add('hidden');
+        }
+
+        if (document.getElementById('city').value) {
+            preview.city.innerHTML = `City: <span class="font-bold">${document.getElementById('city').value}</span>`;
+            preview.city.classList.remove('hidden');
+        } else {
+            preview.city.classList.add('hidden');
+        }
+
+        if (document.getElementById('zip').value) {
+            preview.zip.innerHTML = `ZIP Code: <span class="font-bold">${document.getElementById('zip').value}</span>`;
+            preview.zip.classList.remove('hidden');
+        } else {
+            preview.zip.classList.add('hidden');
+        }
+
+        if (document.getElementById('username').value) {
+            preview.username.innerHTML = `Username: <span class="font-bold">${document.getElementById('username').value}</span>`;
+            preview.username.classList.remove('hidden');
+        } else {
+            preview.username.classList.add('hidden');
+        }
+    }
+
+
+    // Form validation
+    document.getElementById('settings').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        let isValid = true;
+
+        document.querySelectorAll('.input-field').forEach(input => {
+            if (!input.value.trim()) {
+                input.classList.remove('border-gray-300', 'border-green-500');
+                input.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                input.classList.remove('border-gray-300', 'border-red-500');
+                input.classList.add('border-green-500');
+            }
+        });
+
+        if (isValid) {
+            console.log('Form is valid. Submitting...');
+        } else {
+            console.log('Form is invalid. Please fill in all fields.');
+        }
+    });
+
+    // Password check
+    const passwordInput = document.getElementById('pass');
+    const tooltip = document.getElementById('tooltip');
+
+    passwordInput.addEventListener('input', checkPasswordStrength);
+
+    function checkPasswordStrength() {
+        const password = passwordInput.value;
+
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasNumbers = /\d/.test(password);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        const isLengthValid = password.length >= 8;
+
+        if (!hasUpperCase || !hasLowerCase || !hasNumbers || !hasSpecialChar || !isLengthValid) {
+            tooltip.classList.remove('hidden');
+            const rect = passwordInput.getBoundingClientRect();
+            tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
+            tooltip.style.left = `${rect.left}px`;
+        } else {
+            tooltip.classList.add('hidden');
+        }
+    }
+
+</script>
+
 </body>
 </html>
